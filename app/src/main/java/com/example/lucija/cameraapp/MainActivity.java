@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == REQUEST_IMAGE_CAPTURE && requestCode == RESULT_OK) {
+        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap)extras.get("data");
             imageView.setImageBitmap(photo);
